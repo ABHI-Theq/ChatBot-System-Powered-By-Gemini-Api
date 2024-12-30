@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
     @GetMapping("/home")
     public String showIndexPage() {
-        // This will render index.html in the /templates folder
         return "Home";
     }
 
