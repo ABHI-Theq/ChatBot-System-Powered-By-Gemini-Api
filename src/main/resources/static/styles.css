@@ -1,8 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #e9ecef; /* Light gray background */
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +20,7 @@ body {
     border-radius: 20px; /* More rounded corners */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
     padding: 40px; /* Increased padding */
-    width: 500px; /* Increased width */
+    width: 650px; /* Increased width */
     text-align: center;
     transition: transform 0.3s; /* Smooth scaling effect */
 }
@@ -69,9 +75,23 @@ form {
     border: 2px solid #e0e0e0; /* Slightly darker border */
     border-radius: 10px; /* More rounded corners */
     background-color: #f9f9f9; /* Light background for responses */
-    min-height: 150px; /* Increased minimum height */
-    overflow-y: auto; /* Allows scrolling if content overflows */
+    min-height: 300px; /* Increased minimum height */
+    max-height:500px;
+    overflow-y: scroll; /* Allows scrolling if content overflows */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#responseContainer::-webkit-scrollbar {
+    width: 1px;
+}
+
+#responseContainer::-webkit-scrollbar-thumb {
+    background-color: transperent;
+    border-radius: 5px;
+}
+
+#responseContainer::-webkit-scrollbar-thumb:hover {
+    background-color: transperent;
 }
 
 #historyBtn {

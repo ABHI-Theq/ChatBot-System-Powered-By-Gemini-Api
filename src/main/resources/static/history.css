@@ -10,6 +10,10 @@ body {
     background-color: #e9ecef;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #343a40;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 /* Style the main container */
@@ -18,7 +22,7 @@ body {
     margin: 20px auto; /* Reduced margin */
     padding: 15px; /* Reduced padding */
     background-color: #ffffff;
-    border-radius: 8px; /* Slightly smaller border radius */
+    border-radius: 20px; /* Slightly smaller border radius */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,8 +36,26 @@ h1 {
 
 /* Style the history container */
 #historyContainer {
-    margin-bottom: 15px; /* Reduced margin */
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
+
+.historyItem {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+}
+
+.historyItem p {
+    margin: 5px 0;
+}
+
+
 
 /* Style individual history entries */
 .history-entry {
@@ -54,7 +76,7 @@ h1 {
 /* Style the button */
 button {
     display: block;
-    width: 100%;
+    width: 94.5%;
     padding: 8px; /* Reduced padding */
     background-color: #28a745;
     color: white;
@@ -62,6 +84,8 @@ button {
     border-radius: 4px; /* Slightly smaller border radius */
     cursor: pointer;
     font-size: 16px; /* Smaller font size */
+    border-radius:5px;
+    margin:auto;
     transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -69,4 +93,18 @@ button {
 button:hover {
     background-color: #218838;
     transform: translateY(-1px); /* Smaller lift */
+}
+
+/* Scrollbar styles */
+#historyContainer::-webkit-scrollbar {
+    width: 1px;
+}
+
+#historyContainer::-webkit-scrollbar-thumb {
+    background-color: transperent;
+    border-radius: 5px;
+}
+
+#historyContainer::-webkit-scrollbar-thumb:hover {
+    background-color: transperent;
 }
