@@ -48,7 +48,14 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    cd geminiChat
    ```
 
-2. Configure the database and API in `application.properties`:
+2. Create a MySQL database named `chatbot`:
+   - Open MySQL Workbench or any MySQL client.
+   - Run the following SQL command:
+     ```sql
+     CREATE DATABASE chatbot;
+     ```
+
+3. Configure the database and API in `application.properties`:
    ```properties
    spring.application.name=geminiChat
    gemini.api.key=YOUR_API_KEY
@@ -61,17 +68,17 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    spring.sql.init.mode=always
    ```
 
-3. Build the project:
+4. Build the project:
    ```bash
    mvn clean install
    ```
 
-4. Run the application:
+5. Run the application:
    ```bash
    mvn spring-boot:run
    ```
 
-5. Access the application:
+6. Access the application:
    - API Endpoints: `http://localhost:8080/api`
    - Web Interface: `http://localhost:8080/home`
 
