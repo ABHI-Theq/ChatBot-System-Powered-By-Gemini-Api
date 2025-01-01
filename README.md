@@ -157,7 +157,7 @@ For the complete list, refer to the [pom.xml](pom.xml).
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is not licensed yet.
 
 ---
 
