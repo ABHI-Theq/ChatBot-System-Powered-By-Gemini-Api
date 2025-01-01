@@ -1,18 +1,18 @@
-# Gemini Chatbot Project
+# Gemini Chatbot Project 🤖
 
 Welcome to the **Gemini Chatbot** repository! This project is a chatbot application built using the **Java Spring Boot** stack, integrating the **Gemini API** for intelligent Q&A services. The chatbot leverages **MySQL** as its database to store user prompts and responses.
 
 ---
 
-## Features
-- **AI-Powered Q&A**: Ask questions and get intelligent answers powered by the Gemini API.
-- **Chat History**: Retrieve the history of chat interactions.
-- **Database Integration**: Store prompts and responses in a MySQL database for quick access.
-- **Web Interface**: User-friendly interface using Thymeleaf.
+## ✨ Features
+- 🧠 **AI-Powered Q&A**: Ask questions and get intelligent answers powered by the Gemini API.
+- 📜 **Chat History**: Retrieve the history of chat interactions.
+- 💾 **Database Integration**: Store prompts and responses in a MySQL database for quick access.
+- 🎯 **Web Interface**: User-friendly interface using Thymeleaf.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ├── src
@@ -40,7 +40,7 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
 
 ---
 
-## Installation
+## 🚀 Installation
 
 1. Clone the repository:
    ```bash
@@ -79,12 +79,12 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    ```
 
 6. Access the application:
-   - API Endpoints: `http://localhost:8080/api`
-   - Web Interface: `http://localhost:8080/home`
+   - 🔌 API Endpoints: `http://localhost:8080/api`
+   - 🌐 Web Interface: `http://localhost:8080/home`
 
 ---
 
-## API Endpoints
+## 🛠️ API Endpoints
 
 ### 1. Ask a Question
 - **Endpoint**: `/api/ask`
@@ -116,27 +116,27 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
 
 ---
 
-## Dependencies
+## 📦 Dependencies
 
 ### Key Dependencies:
-- **Spring Boot**:
+- 🔧 **Spring Boot**:
   - spring-boot-starter-web
   - spring-boot-starter-webflux
   - spring-boot-starter-data-jpa
   - spring-boot-starter-thymeleaf
-- **Database**:
+- 🗄️ **Database**:
   - MySQL Connector
   - H2 (for testing purposes)
-- **Reactive Programming**:
+- ⚡ **Reactive Programming**:
   - Reactor Core
-- **Utilities**:
+- 🛠️ **Utilities**:
   - Lombok
 
 For the complete list, refer to the [pom.xml](pom.xml).
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository.
 2. Create a feature branch:
@@ -155,15 +155,14 @@ For the complete list, refer to the [pom.xml](pom.xml).
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 Developed by [ABHI-Theq](https://github.com/ABHI-Theq).
 
-Feel free to reach out for any queries or suggestions!
-
+Feel free to reach out for any queries or suggestions! 📧
