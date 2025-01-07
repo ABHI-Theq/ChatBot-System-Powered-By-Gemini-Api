@@ -45,6 +45,7 @@ public class GeminiChatApplicationTests2 {
         assertNotNull(response.getBody(), "Expected non-null response body");
         assertEquals(1, response.getBody().size(), "Expected 1 chat record");
         verify(chatRepository, times(1)).findAll();
+        System.out.println(response.getBody());
 
         System.out.println("Passed: testGetChatHistory_Success");
     }
