@@ -19,23 +19,32 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
 │   ├── main
 │   │   ├── java
 │   │   │   ├── com.example.geminiChat
-│   │   │   │   ├── AiController.java       # Handles API routes for the chatbot
-│   │   │   │   ├── HomeController.java     # Handles frontend routes for UI pages
-│   │   │   │   ├── QnAService.java         # Service for interacting with the Gemini API
-│   │   │   │   ├── ChatRepository.java     # Repository for database interactions
-│   │   │   │   ├── Chat.java               # Entity class for chat data
-│   │   │   │   ├── ChatDto.java            # Data Transfer Object for chat data
+│   │   │   │   ├── AiController.java         # Handles API routes for the chatbot
+│   │   │   │   ├── Chat.java                 # Entity class for chat data
+│   │   │   │   ├── ChatDto.java              # Data Transfer Object for chat data
+│   │   │   │   ├── ChatRepository.java       # Repository for database interactions
+│   │   │   │   ├── GeminiChatApplication.java # Main application class
+│   │   │   │   ├── HomeController.java       # Handles frontend routes for UI pages
+│   │   │   │   ├── QnAService.java           # Service for interacting with the Gemini API
 │   │   ├── resources
 │   │   │   ├── static
-│   │   │   │   ├── index.js                # Frontend JavaScript
-│   │   │   │   ├── styles.css              # Shared CSS styles
-│   │   │   │   ├── history.css             # Styles for the chat history page
+│   │   │   │   ├── index.js                  # Frontend JavaScript
+│   │   │   │   ├── styles.css                # Shared CSS styles
+│   │   │   │   ├── history.css               # Styles for the chat history page
 │   │   │   ├── templates
-│   │   │   │   ├── Home.html               # Home page UI
-│   │   │   │   ├── History.html            # Chat history UI
-│   │   │   ├── application.properties      # Application configurations
-│   │   │   ├── data.sql                    # Initial database seed data
-├── pom.xml                                # Maven dependencies and build configurations
+│   │   │   │   ├── Home.html                 # Home page UI
+│   │   │   │   ├── History.html              # Chat history UI
+│   │   │   ├── application.properties        # Application configurations
+│   │   │   ├── data.sql                      # Initial database seed data
+├── test
+│   ├── java
+│   │   ├── com.example.geminiChat
+│   │   │   ├── GeminiChat.java              # Unit tests for chat functionality
+│   │   │   ├── GeminiChatApplicationTests.java # Application tests
+├── .gitattributes                           # Git attributes configuration
+├── .gitignore                               # Git ignore rules
+├── HELP.md                                  # Help documentation
+├── pom.xml                                  # Maven dependencies and build configurations
 ```
 
 ---
@@ -49,11 +58,9 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    ```
 
 2. Create a MySQL database named `chatbot`:
-   - Open MySQL Workbench or any MySQL client.
-   - Run the following SQL command:
-     ```sql
-     CREATE DATABASE chatbot;
-     ```
+   ```sql
+   CREATE DATABASE chatbot;
+   ```
 
 3. Configure the database and API in `application.properties`:
    ```properties
@@ -68,19 +75,15 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    spring.sql.init.mode=always
    ```
 
-4. Build the project:
+4. Build and run the project:
    ```bash
    mvn clean install
-   ```
-
-5. Run the application:
-   ```bash
    mvn spring-boot:run
    ```
 
-6. Access the application:
-   - 🔌 API Endpoints: `http://localhost:8080/api`
+5. Access the application:
    - 🌐 Web Interface: `http://localhost:8080/home`
+   - 🔌 API Endpoints: `http://localhost:8080/api`
 
 ---
 
@@ -95,24 +98,10 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
     "question": "What is the Gemini API?"
   }
   ```
-- **Response**:
-  ```json
-  "Gemini API is..."
-  ```
 
 ### 2. Get Chat History
 - **Endpoint**: `/api/history`
 - **Method**: GET
-- **Response**:
-  ```json
-  [
-    {
-      "prompt": "What is the Gemini API?",
-      "response": "Gemini API is...",
-      "createdAt": "2025-01-01T12:00:00Z"
-    }
-  ]
-  ```
 
 ---
 
@@ -124,13 +113,9 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
   - spring-boot-starter-webflux
   - spring-boot-starter-data-jpa
   - spring-boot-starter-thymeleaf
-- 🗄️ **Database**:
-  - MySQL Connector
-  - H2 (for testing purposes)
-- ⚡ **Reactive Programming**:
-  - Reactor Core
-- 🛠️ **Utilities**:
-  - Lombok
+- 🗄️ **Database**: MySQL Connector
+- ⚡ **Testing**: JUnit, Spring Boot Test
+- 🛠️ **Utilities**: Lombok
 
 For the complete list, refer to the [pom.xml](pom.xml).
 
@@ -138,20 +123,11 @@ For the complete list, refer to the [pom.xml](pom.xml).
 
 ## 🤝 Contributing
 
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add a new feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m "Add a new feature"`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a pull request
 
 ---
 
