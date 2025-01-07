@@ -39,8 +39,8 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
 ├── test
 │   ├── java
 │   │   ├── com.example.geminiChat
-│   │   │   ├── GeminiChat.java              # Unit tests for chat functionality
-│   │   │   ├── GeminiChatApplicationTests.java # Application tests
+│   │   │   ├── GeminiChatApplicationTests1.java              # Unit tests for chat functionality
+│   │   │   ├── GeminiChatApplicationTests2.java # Application tests
 ├── .gitattributes                           # Git attributes configuration
 ├── .gitignore                               # Git ignore rules
 ├── HELP.md                                  # Help documentation
@@ -86,6 +86,41 @@ Welcome to the **Gemini Chatbot** repository! This project is a chatbot applicat
    - 🔌 API Endpoints: `http://localhost:8080/api`
 
 ---
+
+## 🧪 Unit Testing
+
+The project includes comprehensive unit tests located in the `src/test/java/com.example.geminiChat` directory:
+
+### GeminiChatApplicationTests1.java
+Basic application tests that verify:
+- Application context loading
+- Application startup functionality
+- Core Spring Boot configuration
+
+### GeminiChatApplicationTests2.java
+Comprehensive testing suite for chat functionality including:
+- Chat history retrieval
+  - Successful retrieval
+  - Empty history handling
+  - Exception handling
+- Question handling
+  - Existing prompt retrieval
+  - New prompt processing
+  - Error handling
+  - Async response handling
+- Integration with QnAService
+- Database operations through ChatRepository
+
+Run tests using:
+```bash
+mvn GeminiChatApplicationTests1
+```
+
+```bash
+mvn GeminiChatApplicationTests2
+```
+
+Test output will show detailed progress for each test case with console logging.
 
 ## 🛠️ API Endpoints
 
