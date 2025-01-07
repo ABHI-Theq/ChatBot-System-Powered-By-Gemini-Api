@@ -113,13 +113,8 @@ Comprehensive testing suite for chat functionality including:
 
 Run tests using:
 ```bash
-mvn GeminiChatApplicationTests1
+mvn test
 ```
-
-```bash
-mvn GeminiChatApplicationTests2
-```
-
 Test output will show detailed progress for each test case with console logging.
 
 ## 🛠️ API Endpoints
