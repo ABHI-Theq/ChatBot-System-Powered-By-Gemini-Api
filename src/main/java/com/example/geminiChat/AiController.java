@@ -57,6 +57,7 @@ public class AiController {
         } catch (Exception e) {
             // Log the error and respond gracefully
             System.err.println("Error while fetching chat history: " + e.getMessage());
+
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(null); // Return null or an empty list
         }
